@@ -3,6 +3,7 @@ Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.  No
 
 
 # Function Explained:
+```
 static String timeConversion(String s) {
 int n=s.length();
 String zone=s.substring(n-2);     //To check whether time will be in AM or PM
@@ -26,7 +27,7 @@ if(zone.equals("PM")){
    }
    return res;
 }
-    
+```    
 # Tricky thing noted:
 if(zone=="PM")) doesn't work as String does not get compared implicitly
 instead, if(zone.equals("PM")) will work.
